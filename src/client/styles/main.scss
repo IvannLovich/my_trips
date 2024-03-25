@@ -1,0 +1,103 @@
+@import "base";
+@import "header";
+@import "footer";
+@import "loader";
+
+.main {
+  height: 125px;
+  &__section {
+    &--form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+
+      &__inputs-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      &__button-container {
+        width: 100%;
+      }
+    }
+    &--form__input {
+      width: 200px;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    &--form__btn {
+      font-size: 22px;
+      width: calc(100% - 10px);
+      padding: 10px 20px;
+      margin-top: 50px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #1b1a1a;
+      }
+    }
+  }
+  &__results {
+    margin-top: 70px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &--card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &--card--content {
+      padding: 20px;
+    }
+
+    &--card--title {
+      color: #333;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    &--card--details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      column-gap: 20px;
+    }
+
+    &--card--detail span {
+      color: #666;
+      margin-right: 10px;
+    }
+
+    &--card--button {
+      background-color: #333;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 1rem;
+      margin: 20px auto;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    &--card--button:hover {
+      background-color: #121111;
+    }
+  }
+}

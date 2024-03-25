@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header__navigation">
+        <a href="#" class="header__navigation-link">Home</a>
+        <a href="#" class="header__navigation-link">About</a>
+        <a href="#" class="header__navigation-link">Contact</a>
+      </nav>
+    </header>
+
+    <div id="loader" class="loader-container hidden">
+      <div class="loader"></div>
+    </div>
+    <main class="main">
+      <section class="main__section">
+        <form class="main__section--form">
+          <div class="main__section--form__inputs-container">
+            <input
+              id="name"
+              class="main__section--form__input"
+              type="text"
+              value=""
+              placeholder="City"
+              required
+            />
+            <input
+              id="departure"
+              class="main__section--form__input"
+              type="date"
+              required
+            />
+            <input
+              id="arrival"
+              class="main__section--form__input"
+              type="date"
+              required
+            />
+          </div>
+          <div class="main__section--form__button-container">
+            <input
+              id="btn"
+              class="main__section--form__btn"
+              type="submit"
+              value="Submit"
+            />
+          </div>
+        </form>
+      </section>
+
+      <section class="main__results"></section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text" tabindex="0">Udacity <sup>&reg;</sup></p>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

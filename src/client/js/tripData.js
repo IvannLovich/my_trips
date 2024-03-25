@@ -1,0 +1,3 @@
+let travels = [];
+
+export { travels };
