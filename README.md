@@ -74,6 +74,34 @@ npm run build-dev
 
 This will start the webpack development server.
 
+## Tests
+
+This project includes tests to ensure its functionality.
+
+#### Running the Tests
+
+To run all the tests, execute the following command:
+
+```bash
+npm run test
+```
+
+#### Test Files
+
+The tests for this project are organized into the following files:
+
+1. formHandler.test.js: This file contains tests related to the form handling functionality.
+2. front.test.js: This file includes tests for the front-end components.
+3. helpers.test.js: Here you can find tests for helper functions used in the project.
+
+To run tests for a specific file, you can use the following command:
+
+```bash
+npm test <filename>
+```
+
+Replace <filename> with the name of the specific test file you want to run.
+
 ## Contributing
 
 If you would like to contribute to the project, please follow these steps:
