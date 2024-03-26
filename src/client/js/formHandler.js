@@ -38,16 +38,25 @@ async function handleSubmit(event) {
       });
 
       const data = await response.json();
+
       content.style.opacity = 1;
       loader.classList.add("hidden");
 
+      let destinationName = "";
+      if (
+        data.geoNames &&
+        Array.isArray(data.geoNames.postalcodes) &&
+        data.geoNames.postalcodes.length > 1
+      ) {
+        destinationName = data.geoNames.postalcodes[1].placeName;
+      }
       travels.push({
         id: uniqid(),
-        destinationName: data.geoNames.postalcodes[1].placeName,
+        destinationName,
         tripDate: travelDateFrom,
         daysLeft: leftForTravel,
-        temperature: data.weather.minutely[0].temp,
-        photo: data.photo.hits[0].largeImageURL,
+        temperature: data.weather.minutely?.[0]?.temp || "", // Use optional chaining to safely access nested properties
+        photo: data.photo?.hits?.[0]?.largeImageURL || "", // Use optional chaining to safely access nested properties
       });
 
       return data;
