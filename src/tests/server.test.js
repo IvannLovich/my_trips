@@ -2,9 +2,11 @@ import { mockImplementation } from "node-fetch";
 import request from "supertest";
 import app from "../server/server";
 
+// Mocking style imports
 jest.mock("../client/styles/main.scss", () => ({}));
 jest.mock("../client/styles/header.scss", () => ({}));
 jest.mock("../client/styles/footer.scss", () => ({}));
+
 // Mocking the external APIs
 jest.mock("node-fetch", () => jest.fn());
 
