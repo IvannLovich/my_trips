@@ -12,7 +12,7 @@ A nice app to save the trip that you are planning.
 
 ## Description
 
-Provide a brief overview of your project here. Explain what it does, why it's useful, and any other relevant information.
+In order you can use this webapp you have to type the city of your dreams, select the date you want to travel and date you have to return. And there you go. Your dream trip is set!!
 
 ## Installation
 
@@ -97,7 +97,7 @@ The tests for this project are organized into the following files:
 To run tests for a specific file, you can use the following command:
 
 ```bash
-npm test <filename>
+npm run test <filename>
 ```
 
 Replace <filename> with the name of the specific test file you want to run.

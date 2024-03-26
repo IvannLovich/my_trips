@@ -30,8 +30,6 @@ app.post("/fetchDestination", async (req, res) => {
     latitudeLongitude.push(data1.postalcodes[0].lng);
     latitudeLongitude.push(data1.postalcodes[0].lat);
 
-    console.log("---->", latitudeLongitude);
-
     const weatherApi = `https://api.weatherbit.io/v2.0/current?lat=${latitudeLongitude[1]}&lon=${latitudeLongitude[0]}&key=${weatherApiKey}&include=minutely`;
 
     const api2Response = await fetch(weatherApi);
@@ -47,6 +45,8 @@ app.post("/fetchDestination", async (req, res) => {
       weather: data2,
       photo: data3,
     });
+
+    console.log("data1", data2);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -56,3 +56,5 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = app;
