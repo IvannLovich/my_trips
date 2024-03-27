@@ -93,6 +93,7 @@ The tests for this project are organized into the following files:
 1. formHandler.test.js: This file contains tests related to the form handling functionality.
 2. front.test.js: This file includes tests for the front-end components.
 3. helpers.test.js: Here you can find tests for helper functions used in the project.
+4. server.test.js: Here you will see a test for a successful request.
 
 To run tests for a specific file, you can use the following command:
 
