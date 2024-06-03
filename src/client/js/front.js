@@ -1,7 +1,6 @@
 import { travels } from "./tripData";
 
 function drawTravel() {
-  console.log(travels);
   const travelResult = document.querySelector(".main__results");
   let travelItems = "";
   travels.forEach((element, index) => {

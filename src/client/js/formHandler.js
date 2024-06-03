@@ -27,7 +27,7 @@ async function handleSubmit(event) {
     city.trim() !== ""
   ) {
     const leftForTravel = dayLeftToTrip(travelDateDepartureParsed, date);
-    console.log(leftForTravel);
+
     content.style.opacity = 0.5;
     loader.classList.remove("hidden");
     try {

@@ -1,25 +1,25 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const path = require("path");
-const fetch = require("node-fetch");
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
+const fetch = require('node-fetch');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static("dist"));
+app.use(express.static('dist'));
 
-const geoNamesApiUsername = "ivoelflaco";
-const weatherApiKey = "537f9fb491c44a1d8f6056387d3fd582";
-const photoApiKey = "42864232-25d22fc9d1a9b16b0364431e3";
+const geoNamesApiUsername = '';
+const weatherApiKey = '537f9fb491c44a1d8f6056387d3fd582';
+const photoApiKey = '42864232-25d22fc9d1a9b16b0364431e3';
 
-app.get("/", function (req, res) {
-  res.sendFile(path.resolve("dist/index.html"));
+app.get('/', function (req, res) {
+  res.sendFile(path.resolve('dist/index.html'));
 });
 
-app.post("/fetchDestination", async (req, res) => {
+app.post('/fetchDestination', async (req, res) => {
   try {
     let latitudeLongitude = [];
     const cityName = req.body.city;
@@ -45,10 +45,8 @@ app.post("/fetchDestination", async (req, res) => {
       weather: data2,
       photo: data3,
     });
-
-    console.log("data1", data2);
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error('Error fetching data:', error);
   }
 });
 
