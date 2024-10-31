@@ -2,16 +2,18 @@ version: '3.8'
 
 services:
   app:
-    image: node:16
+    image: node:18-bullseye
     working_dir: /app
     volumes:
       - .:/app
     ports:
       - '3000:3000'
     environment:
-      - UV_THREADPOOL_SIZE=1
+      - UV_THREADPOOL_SIZE=4
     stdin_open: true
     tty: true
+    mem_limit: 4g
+    cpus: '1.5'
     entrypoint: |
       sh -c "
       rm -rf node_modules &&
