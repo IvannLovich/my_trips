@@ -16,63 +16,71 @@ In order you can use this webapp you have to type the city of your dreams, selec
 
 ## Installation
 
+This app has been dockerized to avoid issues with incompatible Node.js versions across different environments, making it easier to set up and run regardless of your local Node setup.
+
+### Docker Installation
+
+To run this project, ensure Docker is installed on your system.
+
+#### macOS
+
+1. Download and install Docker Desktop for Mac from [Docker’s official website](https://www.docker.com/products/docker-desktop/).
+2. After installation, start Docker Desktop and make sure it is running.
+
+#### Windows
+
+1. Download and install Docker Desktop for Windows from [Docker’s official website](https://www.docker.com/products/docker-desktop/).
+2. Start Docker Desktop after installation, and ensure it is running before proceeding.
+
+#### Linux
+
+1. Update your package index:
+
+   ```bash
+   sudo apt update
+   ```
+
+2. Install Docker with the following commands:
+
+   ```bash
+   sudo apt install docker.io
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
+
+3. To verify that Docker is installed correctly, run:
+
+   ```bash
+   docker --version
+   ```
+
+After installing Docker, you're ready to set up the project.
+
+## Project Setup
+
 1. Clone the repository to your local machine using `git clone`.
 
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone https://github.com/IvannLovich/my_trips
    ```
 
 2. Navigate to the project directory.
 
 ```bash
-cd yourproject
+cd myproject
 ```
 
-3. Install dependencies using npm or yarn.
+3. Start the project with Docker Compose:
 
 ```bash
-npm install
-```
-
-or
-
-```bash
-yarn install
-```
-
-## Usage
-
-You have to write city destination you want go and set a departure date as well a return date
-
-#### Running the Server
-
-To start the server, run:
-
-```bash
-npm start
+docker-compose up --build
 ```
 
 This will start the server and make your project available at http://localhost:3000.
 
-#### Building the Project
+## Usage
 
-To build the project for production, run:
-
-```bash
-npm run build-prod
-```
-
-This will create a production-ready build in the dist directory.
-
-#### Development Mode
-
-To run the project in development mode with live reloading, run:
-
-```bash
-npm run build-dev
-```
-
-This will start the webpack development server.
+You have to write city destination you want to go and set a departure date as well a return date
 
 ## Tests
 

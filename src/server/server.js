@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('dist'));
 
-const geoNamesApiUsername = '';
+const geoNamesApiUsername = 'ivoelflaco';
 const weatherApiKey = '537f9fb491c44a1d8f6056387d3fd582';
 const photoApiKey = '42864232-25d22fc9d1a9b16b0364431e3';
 
