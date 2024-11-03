@@ -56,6 +56,21 @@ To run this project, ensure Docker is installed on your system.
 
 After installing Docker, you're ready to set up the project.
 
+## Environment Variables
+
+This project relies on environment variables for accessing external APIs. Once you have downloaded the project, you must modify the .env file with your own API keys, as the ones included by default may have expired or may not be valid.
+
+#### .env File
+
+```bash
+GEONAMES_API_USERNAME=your_geonames_username
+WEATHER_API_KEY=your_weather_api_key
+PHOTO_API_KEY=your_photo_api_key
+
+```
+
+Ensure you replace the placeholder values (`your_geonames_username`, `your_weather_api_key`, `your_photo_api_key`) with your own valid API keys.
+
 ## Project Setup
 
 1. Clone the repository to your local machine using `git clone`.

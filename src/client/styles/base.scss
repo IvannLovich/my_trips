@@ -1,5 +1,5 @@
 * {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,5 +10,11 @@ body {
   place-content: center;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 40vh;
+}
+
+@media (min-width: 1025px) {
+  body {
+    height: 100vh;
+  }
 }

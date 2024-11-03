@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const fetch = require('node-fetch');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 
@@ -11,9 +13,9 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('dist'));
 
-const geoNamesApiUsername = 'ivoelflaco';
-const weatherApiKey = '537f9fb491c44a1d8f6056387d3fd582';
-const photoApiKey = '42864232-25d22fc9d1a9b16b0364431e3';
+const geoNamesApiUsername = process.env.GEONAMES_API_USERNAME;
+const weatherApiKey = process.env.WEATHER_API_KEY;
+const photoApiKey = process.env.PHOTO_API_KEY;
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('dist/index.html'));
